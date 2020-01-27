@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+
+*, 
+*:before, 
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 62.5%;
+}
+
+body {
+    height: 100%;
+}
+
+h1, h2, h3 {
+    margin-bottom: 1.5rem;
+}
+
+p, a, li {
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 2.2rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+p, a, li {
+    font-size: 1.6rem;
+}
+
+cite {
+    font-size: 1.8rem;
+}
+
+cite a:link, cite a:visited {
+    color: teal;
+    margin-bottom: 1.5px;
+    border-bottom: .5px dotted darkblue;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link, 
+a:visited {
+    color: inherit;
+}
+
+header, 
+.wrapper,
+footer {
+    padding: 3rem;
+}
+
+.navbar .active {
+    background-color: blue;
+    color: white;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 2rem;
+    border-bottom: .5px solid rgba(0, 0, 0, .4);
+    margin-bottom: 2rem;
+}
+
+header .navbar-brand {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.container {
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 1rem;
+    height: auto;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 80px;
+}
+
+.wrapper .navbar,
+.wrapper .body-content,
+footer {
+    border: .5px solid rgba(0, 0, 0, .4);
+    box-shadow: .5px 1px 1.5px rgba(0, 0, 0, .5);
+    background-color: #FEFEFE;
+}
+
+.wrapper .navbar {
+    width: 20%;
+}
+
+.navbar li {
+    padding: 5px;
+    margin-bottom: 0;
+}
+
+.navbar li .navbar-item  {
+    display: block;
+    margin-bottom: 0;
+}
+
+.wrapper .body-content {
+    width: 75%;
+    padding: 2rem;
+}
+
+footer {
+    height: 80px;
+    border: .5px solid rgba(0, 0, 0, .4);
+    padding: 2rem;
+    width: 100%;
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+}
+
+.homepage p:not(last-child) {
+    margin-bottom: 1.5rem;
+}
+
+
+@media screen and (max-width: 800px) {
+    html {
+        font-size: 56.25%;
+    }
+
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .wrapper .navbar {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .wrapper .body-content {
+        width: 100%;
+    }
+}

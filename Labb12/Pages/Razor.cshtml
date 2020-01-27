@@ -1,0 +1,37 @@
+﻿@page
+@model ContactModel
+@{
+    ViewData["Title"] = "Razor";
+
+    var arrayOfCourses = new[] {
+        new { code = "DT057G", name = "Webbutveckling I" },
+        new { code = "DT084G", name = "Introduktion till programmering med JavaScript" },
+        new { code = "DT163G", name = "Digital bildbehandling för webb" },
+        new { code = "GD008G", name = "Typografi och form för webb" },
+        new { code = "DT003G", name = "Databaser" },
+        new { code = "DT093G", name = "Webbutveckling II" },
+        new { code = "DT068G", name = "Webbanvändbarhet" },
+        new { code = "DT152G", name = "Webbdesign för CMS" },
+        new { code = "DT173G", name = "Webbutveckling III" },
+        new { code = "IK060G", name = "Projektledning" },
+        new { code = "DT162G", name = "JavaScript-baserad webbutveckling" },
+        new { code = "DT071G", name = "Programmering I C#.net" },
+    };
+}
+<div class="razor">
+    <h1>Razor</h1>
+    <h2>Information</h2>
+    <h3><strong>Datum/klockslag:</strong> @DateTime.Now</h3>
+    @{ 
+        var currentDay = DateTime.Now.DayOfWeek.ToString();
+    }
+    <p>Idag är det @(currentDay == "Monday" ? "måndag." : "inte måndag.")</p>
+
+    <h2>Kurser jag läst:</h2>
+    <ul>
+        @foreach (var course in arrayOfCourses)
+        {
+            <li>@course.code, @course.name</li>
+        }
+    </ul>
+</div>
